@@ -1,0 +1,6 @@
+{
+	"devDependencies": {
+		"gh-pages": "^6.1.1",
+		"homepage": "http://goncharenkovitaliy.github.io/search_number"
+	}
+}
