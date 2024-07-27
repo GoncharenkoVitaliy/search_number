@@ -41,24 +41,11 @@ input :focus {
 	margin-bottom: 25px;
 
 	.header__range > * {
-		width: 80px;
+		width: fit-content;
 		height: 25px;
 		border-radius: 5px;
 		border: 1px solid white;
 	}
-	/* #range__number_start {
-		width: 80px;
-		height: 25px;
-		border-radius: 5px;
-		border: 1px solid white;
-	}
-
-	#range__number_end {
-		width: 80px;
-		height: 25px;
-		border-radius: 5px;
-		border: 1px solid white;
-	} */
 }
 
 .top__container {
