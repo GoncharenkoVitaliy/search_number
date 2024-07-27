@@ -18,7 +18,10 @@ button {
 	padding: 15px 10px;
 	min-width: 150px;
 }
-input, input :active, input :focus {
+
+input,
+input :active,
+input :focus {
 	background: transparent;
 	border: none;
 	color: white;
@@ -36,6 +39,18 @@ input, input :active, input :focus {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 25px;
+	#range__number_start{
+		width: 80px;
+		height: 25px;
+		border-radius: 5px;
+		border: 1px solid white;
+	}
+	#range__number_end{
+		width: 80px;
+		height: 25px;
+		border-radius: 5px;
+		border: 1px solid white;
+	}
 }
 
 .top__container {
@@ -76,24 +91,27 @@ input, input :active, input :focus {
 		flex-direction: column;
 		align-items: center;
 
-		.left__enter_number {
+		/* .left__enter_number {
+			width: 100px;
+			height: 50px;
+			border: 2px solid white;
+			border-radius: 5px;
+			padding: 5px;
+			margin-bottom: 10px; */
+
+		#enter_number__value {
 			width: 100px;
 			height: 50px;
 			border: 2px solid white;
 			border-radius: 5px;
 			padding: 5px;
 			margin-bottom: 10px;
-
-			#enter_number__value {
-				max-width: 100%;
-				height: 100%;
-			}
+			/* max-width: 100%;
+				height: 100%; */
 		}
 	}
-
 	.right__box {
 		line-height: 18px;
 		margin: auto 0;
 	}
-
 }

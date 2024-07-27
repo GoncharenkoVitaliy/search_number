@@ -16,11 +16,11 @@
 
 		<header class="header__container">
 			<button id="header__button">Сначала!</button>
-			<p class="header__range">&lt;Между
-				<span id="range__number_start"></span>
+			<div class="header__range">&lt;Между
+				<input type="number" id="range__number_start" value="1"></input>
 				и
-				<span id="range__number_end"></span>&gt;
-			</p>
+				<input type="number" id="range__number_end" value="20"></input>&gt;
+			</div>
 		</header>
 
 		<section class="top__container">
@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="right__box">
-				<p class="right__start_enter">Начни угадывать!</p>
+				<p id="right__start_enter">Начни угадывать!</p>
 				<p class="right__points">Очки:
 					<span id="points__number"></span>
 				</p>
