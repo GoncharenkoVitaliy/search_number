@@ -1,7 +1,8 @@
 const log = console.log;
-const wrap = document.getElementById('wrapper');
+const wrap = (message) => {
+	document.getElementById('wrapper').style.backgroundColor = (message)
+};
 
-const headerStartButton = document.getElementById('header__button');
 const headerRangeNumberStart = document.getElementById('range__number_start');
 const headerRangeNumberEnd = document.getElementById('range__number_end');
 
@@ -11,9 +12,15 @@ const enterNumberInput = document.getElementById('enter_number__value');
 const leftExaminationButton = document.getElementById('left__examination');
 
 // Guessing - угадывать
-const startGuessing = document.getElementById('right__start_enter');
-const rightPointsNumber = document.getElementById('points__number');
-const rightBestResult = document.getElementById('best_result__number');
+const startGuessing = (message) => {
+	document.getElementById('right__start_enter').textContent = message;
+}
+const rightPointsNumber = (message) => {
+	document.getElementById('points__number').textContent = message;
+}
+const rightBestResult = (message) =>{
+	document.getElementById('best_result__number').textContent = message;
+}
 
 let minNumber = +headerRangeNumberStart.value;
 let maxNumber = +headerRangeNumberEnd.value;
@@ -27,58 +34,59 @@ function randomNumber(min, max) {
 
 // random number загаданное
 let guessedNumber = randomNumber(minNumber, maxNumber);
-log('randomNumber:' + guessedNumber);
-
 let count = 20;
-rightPointsNumber.textContent = count;
-
+rightPointsNumber(count);
 let bestCount = 0
 
-headerStartButton.addEventListener('click', startButton);
 leftExaminationButton.addEventListener('click', compaerNumber);
 enterNumberInput.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter') {
-			compaerNumber();
+		compaerNumber();
 	};
 })
 
 function compaerNumber() {
 	const enteredValue = +enterNumberInput.value;
 	if (+enteredValue === guessedNumber) {
-		wrap.style.backgroundColor = 'green';
+		wrap('green');
 		enterNumberInput.style.border = "solid white 2px";
 		topHiddenNumber.textContent = guessedNumber;
-		startGuessing.textContent = 'Угадал !!!';
+		startGuessing('Угадал !!!');
 
 		if (count > bestCount) {
 			bestCount = count;
-			rightBestResult.textContent = bestCount;
+			rightBestResult(bestCount);
 		}
 	} else {
 		if (count < 2) {
-			wrap.style.backgroundColor = 'red';
-			startGuessing.textContent = 'Начни сначала';
-			rightPointsNumber.textContent = '0';
+			wrap('red');
+			startGuessing('Начни сначала');
+			rightPointsNumber('0');
 			return
 		}
 		count--;
-		rightPointsNumber.textContent = count;
+		rightPointsNumber(count);
 		enterNumberInput.style.border = "solid red 2px";
-		startGuessing.textContent = enteredValue > guessedNumber
+		startGuessing(
+			enteredValue > guessedNumber
 			? 'Слишком много'
 			: 'Слишком мало'
+		)
 	}
 }
+
+const headerStartButton = document.getElementById('header__button');
+headerStartButton.addEventListener('click', startButton);
 
 function startButton() {
 	minNumber = +headerRangeNumberStart.value;
 	maxNumber = +headerRangeNumberEnd.value;
 	guessedNumber = randomNumber(minNumber, maxNumber);
 	log('guessedNumber:' + guessedNumber);
-	wrap.style.backgroundColor = 'black';
+	wrap('black');
 	enterNumberInput.value = '';
 	enterNumberInput.style.border = "solid white 2px";
 	topHiddenNumber.textContent = '???';
 	count = 20;
-	rightPointsNumber.textContent = count;
+	rightPointsNumber(count);
 }
