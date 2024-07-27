@@ -39,18 +39,26 @@ input :focus {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 25px;
-	#range__number_start{
+
+	.header__range > * {
 		width: 80px;
 		height: 25px;
 		border-radius: 5px;
 		border: 1px solid white;
 	}
-	#range__number_end{
+	/* #range__number_start {
 		width: 80px;
 		height: 25px;
 		border-radius: 5px;
 		border: 1px solid white;
 	}
+
+	#range__number_end {
+		width: 80px;
+		height: 25px;
+		border-radius: 5px;
+		border: 1px solid white;
+	} */
 }
 
 .top__container {
@@ -92,7 +100,7 @@ input :focus {
 		align-items: center;
 
 		#enter_number__value {
-			max-width: 100px;
+			width: 100px;
 			height: 50px;
 			border: 2px solid white;
 			border-radius: 5px;
@@ -100,6 +108,7 @@ input :focus {
 			margin-bottom: 10px;
 		}
 	}
+
 	.right__box {
 		line-height: 18px;
 		margin: auto 0;
