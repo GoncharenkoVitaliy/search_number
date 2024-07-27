@@ -1,0 +1,99 @@
+body {
+	width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body,
+button,
+input {
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+button {
+	border-radius: 5px;
+	padding: 15px 10px;
+	min-width: 150px;
+}
+input, input :active, input :focus {
+	background: transparent;
+	border: none;
+	color: white;
+	text-align: center;
+}
+
+#wrapper {
+	min-height: 100vh;
+	color: white;
+	background-color: black;
+	padding: 20px;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.top__container {
+	min-height: 150px;
+
+	.top__title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.top__wrapper {
+		position: relative;
+		height: 50px;
+		padding-top: 45px;
+
+		.wrapper__line {
+			width: 100%;
+			height: 3px;
+			background: white;
+		}
+
+		.wrapper__hidden_number {
+			position: absolute;
+			top: 20px;
+			right: 50%;
+			transform: translate(50%);
+		}
+	}
+}
+
+.bottom__container {
+	display: flex;
+	justify-content: space-around;
+
+	.left__box {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.left__enter_number {
+			width: 100px;
+			height: 50px;
+			border: 2px solid white;
+			border-radius: 5px;
+			padding: 5px;
+			margin-bottom: 10px;
+
+			#enter_number__value {
+				max-width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.right__box {
+		line-height: 18px;
+		margin: auto 0;
+	}
+
+}

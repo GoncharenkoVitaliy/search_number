@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+	</style>
+	<link rel="stylesheet" href="./style.css">
+	<title>Guess the number</title>
+</head>
+
+<body>
+	<main id="wrapper">
+
+		<header class="header__container">
+			<button id="header__button">Сначала!</button>
+			<p class="header__range">&lt;Между
+				<span id="range__number_start"></span>
+				и
+				<span id="range__number_end"></span>&gt;
+			</p>
+		</header>
+
+		<section class="top__container">
+			<h1 class="top__title">Угадай число!</h1>
+			<div class="top__wrapper" >
+				<div class="wrapper__line"></div>
+				<div class="wrapper__hidden_number">
+					<button id="hidden_number__question_button">???</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="bottom__container">
+
+			<div class="left__box">
+				<div class="left__enter_number">
+					<input type="number" id="enter_number__value"></input>
+				</div>
+				<button id="left__examination">Проверить!</button>
+			</div>
+
+			<div class="right__box">
+				<p class="right__start_enter">Начни угадывать!</p>
+				<p class="right__points">Очки:
+					<span id="points__number"></span>
+				</p>
+				<p class="right__best_result">Лучший результат:
+					<span id="best_result__number">0</span>
+				</p>
+			</div>
+
+		</section>
+
+	</main>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
