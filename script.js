@@ -42,7 +42,7 @@ function compaerNumber() {
 		topHiddenNumber.textContent = guessedNumber;
 
 
-		log(rightBestResult.value);
+		// log(rightBestResult.value);
 
 	} else {
 		
