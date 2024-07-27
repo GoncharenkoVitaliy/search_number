@@ -20,7 +20,6 @@ headerRangeNumberEnd.textContent = maxNumber;
 
 const log = console.log;
 
-consoleLog('hello');
 // random number from min to max inclusive
 function randomNumber(min, max) {
 	return (
