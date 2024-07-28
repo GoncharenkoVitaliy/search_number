@@ -1,4 +1,6 @@
 const log = console.log;
+
+// coment
 const wrap = (message) => {
 	document.getElementById('wrapper').style.backgroundColor = (message)
 };
